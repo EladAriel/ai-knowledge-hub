@@ -2,12 +2,14 @@
 
 ## Summary
 
-Agents propose metadata with cited, scored arguments; the data owner accepts/rejects/edits before anything is written; ….
+Agents propose metadata with cited, scored arguments; the data owner accepts/rejects/edits before anything is written; decisions recorded.
 
-## Details
+## Content
 
-Only uncertain proposals go to review. Store each proposal as a row with evidence, confidence, reviewer and decision, not just the final value.
+**2. [Contestable Agents for Data Governance](https://arxiv.org/abs/2610.31553)**
+- Agents propose metadata, like a class label or a link between records, along with cited and scored arguments. A domain expert who owns that data accepts, rejects or edits the proposal before anything is written, and a governance record keeps the evidence and the decision.
+- Only uncertain proposals go through the...store each proposal as a row with its evidence, confidence, reviewer and decision, not just the final value.
 
 ## Sources
 
-- [Contestable Agents for Data …](https://arxiv.org/abs/2610.31553)
+- [Contestable Agents for Data Governance](https://arxiv.org/abs/2610.31553)

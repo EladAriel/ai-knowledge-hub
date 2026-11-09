@@ -8,6 +8,11 @@ Extracts a taxonomy and ontology from the prefixes of Matryoshka embeddings (EMN
 
 Listed as a new term in the Nov 3 AI methods digest (one-line mention, no further details given).
 
+## Content
+
+**New names and terms**
+- [PEEL](https://arxiv.org/abs/2610.41785): Taxonomy and ontology extraction from the prefixes of Matryoshka embeddings (EMNLP 2026).
+
 ## Sources
 
 - [PEEL (arXiv)](https://arxiv.org/abs/2610.41785)

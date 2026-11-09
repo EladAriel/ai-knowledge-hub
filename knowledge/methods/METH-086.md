@@ -8,6 +8,11 @@ A durable kanban board for coordination between agents, by Corvic; the authors a
 
 Listed as a new term in the Nov 4 AI methods digest (one-line mention).
 
+## Content
+
+**New names and terms**
+- [Agent Board / Board Keeper](https://arxiv.org/abs/2611.04100): A durable kanban board for coordination between agents, by Corvic. The authors admit that an external watcher is simply cheaper.
+
 ## Sources
 
 - [Agent Board (arXiv)](https://arxiv.org/abs/2611.04100)

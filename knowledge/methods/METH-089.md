@@ -8,6 +8,7 @@ Enforces a 'role contract' on messages between agents in black-box multi-agent s
 
 Listed as a new term in the Nov 4 AI methods digest (one-line mention, no link given).
 
-## Sources
+## Content
 
-- (no public source link recorded)
+**New names and terms**
+- ATC (Agent Trajectory Control): enforcement of a "role contract" on messages between agents in black-box systems (EMNLP 2026).

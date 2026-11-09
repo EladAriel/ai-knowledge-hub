@@ -4,9 +4,12 @@
 
 '/stack' lists every skill, subagent, hook, MCP server and setting, and which scope each loads from.
 
-## Details
+## Content
 
-It's read-only and masks secrets. Credit: davila7/claude-code-templates.
+- **[stack-viewer](https://github.com/davila7/claude-code-templates/pull/1233)**: `/stack` lists every skill, subagent, hook, MCP server and setting, and which scope each loads from. It's read-only and masks secrets. Effort ~5 min. Credit: davila7/claude-code-templates.
+```
+npx claude-code-templates --mod ui/stack-viewer
+```
 
 ## Sources
 

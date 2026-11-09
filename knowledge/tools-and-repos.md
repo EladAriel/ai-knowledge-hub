@@ -1,43 +1,41 @@
 # Tools & Repos
 
-Items: 39.
-
-- [TOOL-001](tools-and-repos/TOOL-001.md) | security-auditor subagent (wshobson/agents) | /plugin marketplace add wshobson/agents, /plugin install backend-development@claude-code-workflows…
-- [TOOL-002](tools-and-repos/TOOL-002.md) | Microsoft Execution Containers (MXC) | Microsoft Execution Containers (MXC). This note summarizes a publicly reported technique or tool worth…
+- [TOOL-001](tools-and-repos/TOOL-001.md) | security-auditor subagent (wshobson/agents) | Dedicated security checker for OWASP, auth and secrets that can be run on any feature (40.3k★, MIT).
+- [TOOL-002](tools-and-repos/TOOL-002.md) | Microsoft Execution Containers (MXC) | What it is: An isolation layer for Windows agents. A policy determines which files and network destinations the agent can access, and MXC enforces it at runtime. The version reached 1.0 GA.
 - [TOOL-003](tools-and-repos/TOOL-003.md) | HOL Guard, a local 'AI antivirus' | Checks risky shell, file, MCP, plugin and skill actions on your machine before they run.
-- [TOOL-004](tools-and-repos/TOOL-004.md) | protect-mcp starter policy hook | Built-in starter policy blocks force-pushing to main, 'rm -rf /', reading secrets, and 'curl | sh', with…
+- [TOOL-004](tools-and-repos/TOOL-004.md) | protect-mcp starter policy hook | Built-in starter policy blocks force-pushing to main, 'rm -rf /', reading secrets, and 'curl | sh', with signed receipts.
 - [TOOL-005](tools-and-repos/TOOL-005.md) | Turn-inspector | Adds a '/turns' view of what fills each request's context window, which helps find token drains (~5 min).
-- [TOOL-006](tools-and-repos/TOOL-006.md) | Repos: Onyx, Graphiti, Hindsight | Enterprise search with per-connector permission sync; temporal knowledge graph for memory; Postgres agent…
+- [TOOL-006](tools-and-repos/TOOL-006.md) | Repos: Onyx, Graphiti, Hindsight | Enterprise search with per-connector permission sync; temporal knowledge graph for memory; Postgres agent memory.
 - [TOOL-007](tools-and-repos/TOOL-007.md) | Repos: WeKnora, rank_llm, headroom | Open-source knowledge platform; reproducible LLM reranking toolkit; reversible context compression proxy.
-- [TOOL-008](tools-and-repos/TOOL-008.md) | Scan third-party skills and plugins with NVIDIA SkillSpector | SkillSpector v2.13.0 shipped Oct 16; claude-code-templates now shows a SkillSpector result on every catalog…
-- [TOOL-009](tools-and-repos/TOOL-009.md) | Repos: supermemory company-brain, memoket-kite, promptfoo | Open-sourced Slack company brain with a good permission model; embedding-free memory engine; ….
-- [TOOL-010](tools-and-repos/TOOL-010.md) | Repos: kitaru, Laminar, jevals | Replay recorded sessions as regression tests; OTel tracing with plain-English 'Signals'; ….
-- [TOOL-011](tools-and-repos/TOOL-011.md) | Repos: AWS context-ontology-accelerator, OmniGraph, PipesHub | Ontology business-context layer over MCP/REST/SPARQL; graph DB on object storage with git-style branches; ….
+- [TOOL-008](tools-and-repos/TOOL-008.md) | Scan third-party skills and plugins with NVIDIA SkillSpector | SkillSpector v2.13.0 shipped Oct 16; claude-code-templates now shows a SkillSpector result on every catalog component.
+- [TOOL-009](tools-and-repos/TOOL-009.md) | Repos: supermemory company-brain, memoket-kite, promptfoo | Open-sourced Slack company brain with a good permission model; embedding-free memory engine; promptfoo llm-rubric judges in CI.
+- [TOOL-010](tools-and-repos/TOOL-010.md) | Repos: kitaru, Laminar, jevals | Replay recorded sessions as regression tests; OTel tracing with plain-English 'Signals'; all evals for a trace in one cheap request.
+- [TOOL-011](tools-and-repos/TOOL-011.md) | Repos: AWS context-ontology-accelerator, OmniGraph, PipesHub | Ontology business-context layer over MCP/REST/SPARQL; graph DB on object storage with git-style branches; self-hosted workplace search.
 - [TOOL-012](tools-and-repos/TOOL-012.md) | Repos: Quivr V2, CocoIndex, Azure agent-app-ingestion | Durable ingestion service; incremental pipeline engine; ingestion with delete jobs and confirmed audit events.
 - [TOOL-013](tools-and-repos/TOOL-013.md) | stack-viewer | '/stack' lists every skill, subagent, hook, MCP server and setting, and which scope each loads from.
-- [TOOL-014](tools-and-repos/TOOL-014.md) | Trail of Bits regression-hunt | Checks agent-written fixes for regressions against a live build. Effort ~45 min for the first run. /plugin…
-- [TOOL-015](tools-and-repos/TOOL-015.md) | Small parser models: OCRia-1, Nemotron 3.5 Parse, SoMark OXR | Three small document-parsing models in one week. LlamaIndex OCRia-1 (4B): 87.4 on ParseBench vs 75.3 next…
+- [TOOL-014](tools-and-repos/TOOL-014.md) | Trail of Bits regression-hunt | Checks agent-written fixes for regressions against a live build.
+- [TOOL-015](tools-and-repos/TOOL-015.md) | Small parser models: OCRia-1, Nemotron 3.5 Parse, SoMark OXR | LlamaIndex OCRia-1 (4B): 87.4 on ParseBench vs 75.3 next (LlamaIndex's own benchmark), no bounding boxes.
 - [TOOL-016](tools-and-repos/TOOL-016.md) | Repos: Docling, Chonkie, Knowhere | Document conversion with page/bbox; lightweight chunking library; dual-path parsing with navigable memory.
 - [TOOL-017](tools-and-repos/TOOL-017.md) | Repos: LangExtract, cognee, Splink | Source-grounded LLM extraction; ontology-checked memory/KG layer; probabilistic record linkage.
-- [TOOL-018](tools-and-repos/TOOL-018.md) | Amazon OpenSearch intelligent ingestion | Managed S3 -> index pipeline: layout-aware parsing, image captions via vision model, chunk, embed, index; ….
+- [TOOL-018](tools-and-repos/TOOL-018.md) | Amazon OpenSearch intelligent ingestion | Managed S3 -> index pipeline: layout-aware parsing, image captions via vision model, chunk, embed, index; jobs or streams.
 - [TOOL-019](tools-and-repos/TOOL-019.md) | Repos: gbrain, LanceDB, ParadeDB | Markdown-first company brain with public evals; embedded versioned vector store; BM25+vector inside Postgres.
-- [TOOL-020](tools-and-repos/TOOL-020.md) | worktree-cleaner skill | Lists your worktrees read-only and labels each one SAFE, AT_RISK, and so on (MIT…
-- [TOOL-021](tools-and-repos/TOOL-021.md) | Repos: SpiceDB secure-RAG workshop, schemagate, VaultRAG | Permission pre-filtering in a LangGraph+Qdrant RAG; access control for text-to-SQL; ….
-- [TOOL-022](tools-and-repos/TOOL-022.md) | Repos: haiku.rag, sentence-transformers v6.2, Infinity | Local agentic RAG with swappable rerankers; fine-tune your own cross-encoder reranker; ….
-- [TOOL-023](tools-and-repos/TOOL-023.md) | Cursor Agent SDK (GA), local trial only | Cursor's Agent SDK is generally available. It lets you define agents as code, with built-in evals and a…
+- [TOOL-020](tools-and-repos/TOOL-020.md) | worktree-cleaner skill | Lists your worktrees read-only and labels each one SAFE, AT_RISK, and so on (MIT, davila7/claude-code-templates).
+- [TOOL-021](tools-and-repos/TOOL-021.md) | Repos: SpiceDB secure-RAG workshop, schemagate, VaultRAG | Permission pre-filtering in a LangGraph+Qdrant RAG; access control for text-to-SQL; ACL check inside the same Postgres query.
+- [TOOL-022](tools-and-repos/TOOL-022.md) | Repos: haiku.rag, sentence-transformers v6.2, Infinity | Local agentic RAG with swappable rerankers; fine-tune your own cross-encoder reranker; self-hosted embeddings/rerank server.
+- [TOOL-023](tools-and-repos/TOOL-023.md) | Cursor Agent SDK (GA), local trial only | It lets you define agents as code, with built-in evals and a 'security-reviewer' template. Effort: ~45 min for a local trial with no deploy.
 - [TOOL-024](tools-and-repos/TOOL-024.md) | claude-md-management (official plugin) | Scores your CLAUDE.md against the current codebase and writes session learnings back into it.
-- [TOOL-025](tools-and-repos/TOOL-025.md) | Repos: RAGFlow, Pydantic AI, NeMo Guardrails | RAG engine with source-traced citations and depth levels; typed agent framework with agentic evaluators; ….
-- [TOOL-026](tools-and-repos/TOOL-026.md) | Repos: Langfuse, Opik, Phoenix | Tracing + evals platforms: live-trace judge rules, online evaluation rules, vendor-neutral OpenInference…
-- [TOOL-027](tools-and-repos/TOOL-027.md) | Grim Prompter /threat-model | (Jim Manico) a read-only STRIDE threat model with file-and-line evidence. It also maps MCP tools to the…
+- [TOOL-025](tools-and-repos/TOOL-025.md) | Repos: RAGFlow, Pydantic AI, NeMo Guardrails | RAG engine with source-traced citations and depth levels; typed agent framework with agentic evaluators; programmable rails.
+- [TOOL-026](tools-and-repos/TOOL-026.md) | Repos: Langfuse, Opik, Phoenix | Tracing + evals platforms: live-trace judge rules, online evaluation rules, vendor-neutral OpenInference tracing.
+- [TOOL-027](tools-and-repos/TOOL-027.md) | Grim Prompter /threat-model | (Jim Manico) a read-only STRIDE threat model with file-and-line evidence.
 - [TOOL-028](tools-and-repos/TOOL-028.md) | Official mcp-builder skill, updated | (Anthropic, Oct 28) new internal MCP servers start on TypeScript SDK v2 and come with a self-check script.
-- [TOOL-029](tools-and-repos/TOOL-029.md) | Repos: openwiki, TencentDB-Agent-Memory, OpenViking | Compile repos/docs into a source-linked wiki (CLI + MCP); shared team memory knowledge base; ….
+- [TOOL-029](tools-and-repos/TOOL-029.md) | Repos: openwiki, TencentDB-Agent-Memory, OpenViking | Compile repos/docs into a source-linked wiki (CLI + MCP); shared team memory hub; virtual file system with L0/L1/L2 detail levels.
 - [TOOL-030](tools-and-repos/TOOL-030.md) | Repos: dlt, Nango, OpenLineage | Typed loading with schema contracts; managed OAuth/proxy/syncs for 1,000+ APIs; lineage events per run.
-- [TOOL-031](tools-and-repos/TOOL-031.md) | DLite: | DLite:. This note captures a publicly reported idea for AI development teams to evaluate against primary…
-- [TOOL-032](tools-and-repos/TOOL-032.md) | Repo: xberg-io/xberg (formerly Kreuzberg) | Extracts text, tables and metadata from 100+ file formats, with OCR and code-aware chunking; library, CLI…
-- [TOOL-033](tools-and-repos/TOOL-033.md) | Repos: neo4j-labs/agent-memory, GLiNER2 | neo4j-labs/agent-memory: graph memory for agents (Python/TS SDKs) with three-way entity outcome (merge /…
-- [TOOL-034](tools-and-repos/TOOL-034.md) | Repos: Qdrant, Vespa, pgvectorscale | Vector DB with named vectors for migrations; one engine for BM25 + vector + multi-stage ranking with a RAG…
+- [TOOL-031](tools-and-repos/TOOL-031.md) | DLite: Speculative decoding for agent workloads | In the work of the agents, the input is long and the output is short, and in such a situation normal draft models are enough to produce only 1 to 2 tokens that are received.
+- [TOOL-032](tools-and-repos/TOOL-032.md) | Repo: xberg-io/xberg (formerly Kreuzberg) | Extracts text, tables and metadata from 100+ file formats, with OCR and code-aware chunking; library, CLI, REST API or MCP server, CPU only.
+- [TOOL-033](tools-and-repos/TOOL-033.md) | Repos: neo4j-labs/agent-memory, GLiNER2 | neo4j-labs/agent-memory: graph memory for agents (Python/TS SDKs) with three-way entity outcome (merge / pending-duplicate review / new).
+- [TOOL-034](tools-and-repos/TOOL-034.md) | Repos: Qdrant, Vespa, pgvectorscale | Vector DB with named vectors for migrations; one engine for BM25 + vector + multi-stage ranking with a RAG Blueprint; disk-based vector index for Postgres with label-filtered search.
 - [TOOL-035](tools-and-repos/TOOL-035.md) | vercel-labs/agent-desktop: Rust CLI for computer use | A Rust CLI for computer-use agents; first on GitHub trending with ~2,275 stars on Nov 3.
-- [TOOL-036](tools-and-repos/TOOL-036.md) | worktrunk: git worktree management for parallel agents | Manages git worktrees for agents running in parallel. Listed as a new name in the Nov 4 AI methods digest…
-- [TOOL-037](tools-and-repos/TOOL-037.md) | Repos: openfga/openfga, presidio (permissions + PII redaction for derived knowledge) | openfga: relationship-based permission engine (Zanzibar style, CNCF, SDKs for Python/TS/Go/Java/.NET)…
-- [TOOL-038](tools-and-repos/TOOL-038.md) | Repos: qdrant/fastembed, FlagOpen/FlagEmbedding, castorini/pyserini | Three local/reproducible retrieval tools for rerank and baselines. fastembed (~3.3k★, Apache-2.0, pushed Nov…
+- [TOOL-036](tools-and-repos/TOOL-036.md) | worktrunk: git worktree management for parallel agents | Listed as a new name in the Nov 4 AI methods digest (one-line mention). Related: 'One git worktree per agent task' (DevEx, Oct 13).
+- [TOOL-037](tools-and-repos/TOOL-037.md) | Repos: openfga/openfga, presidio (permissions + PII redaction for derived knowledge) | openfga: relationship-based permission engine (Zanzibar style, CNCF, SDKs for Python/TS/Go/Java/.NET). presidio (formerly microsoft/presidio): finds and redacts personal data in text, images and structured data.
+- [TOOL-038](tools-and-repos/TOOL-038.md) | Repos: qdrant/fastembed, FlagOpen/FlagEmbedding, castorini/pyserini | Three local/reproducible retrieval tools for rerank and baselines.
 - [TOOL-039](tools-and-repos/TOOL-039.md) | Kimi K3.1 Pro: open MoE weights (2.8T params) | Open weights, 2.8T parameters, MoE. Listed as a new name in the Nov 5 AI methods digest.
