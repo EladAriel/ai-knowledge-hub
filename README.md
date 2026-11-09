@@ -19,14 +19,14 @@ knowledge/
 
 1. Open [INDEX.md](INDEX.md) for the map and schema.
 2. Open a topic index such as `knowledge/methods.md` and scan the one-line summaries.
-3. Open only the item files you need. Each has a short Summary, optional Details, and public Sources.
+3. Open the item file for the full Summary, Details, Content (digest body), and public Sources.
 
 Cite items by id (for example `METH-012`). Treat claims as proposals until you check the linked sources.
 
 ## How to contribute
 
 - Add a new item as `knowledge/<topic>/<PREFIX>-<next number>.md` using the schema in INDEX.md, and add one line to the topic index.
-- Keep summaries short and in your own words. Link to public sources instead of copying long passages.
+- Keep the full substance of each note (do not truncate mid-sentence). Link to public sources; avoid pasting long verbatim third-party articles.
 - Do not commit secrets, tokens, private paths, or personal details.
 - Prefer pull requests for changes.
 

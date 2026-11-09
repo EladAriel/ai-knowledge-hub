@@ -6,8 +6,9 @@ Linking API endpoints in business-process order with typed context: 38.7% task c
 
 ## Details
 
-Valid code lists stopped invented codes; invalid payload fields still in 46% of write runs; full typed context cut invalid calls to 3%. Doesn't help on OpenAPI services with no process layer. ….
+Valid code lists stopped invented codes; invalid payload fields still in 46% of write runs; full typed context cut invalid calls to 3%. Doesn't help on OpenAPI services with no process layer. Always send schema and valid values with each tool description; treat process models as part of the ontology.
 
-## Sources
+## Content
 
-- (no public source link recorded)
+## New terms
+- **Process-aware knowledge graph:** a graph linking API endpoints in business-process order.
