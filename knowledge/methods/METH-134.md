@@ -1,0 +1,13 @@
+# METH-134: Which Claude model should you build with? Fable, Opus, Sonnet, or Haiku
+
+## Summary
+
+Start most work on Opus 5.5 at medium effort. Use Sonnet 5.5 for scoped work, Haiku 5.5 for high-volume classification and routing, and Fable 5.2 for the hardest work. Based on a Nov 9 claude.dev post.
+
+## Details
+
+A bigger model gives you more capability but adds latency and costs more per token. It doesn't always cost more per finished task. In a shipped app, model and effort level are your biggest dials for cost and latency. Your hardest tasks also carry most of the spend: on one benchmark, 2 of 20 problems used 43% of the cost. Ladder: not good enough → add self-verification (a test, a build, or a script that hits the endpoint) → raise effort one level → move up a model at lower effort. A cheaper pattern is to run everything at low effort → check the results automatically → re-run only the failures at high. With Opus 5.5 this passed about 97% at roughly $0.17 a task, versus 95.3% at $0.29 with every task at high. Switching models mid-conversation throws away the prompt cache and sometimes the earlier thinking, so compact or summarize first. Build requests for the strictest model: append-only history, tool_choice auto with strict tools, and content blocks read by type. Example: a TypeScript Next.js support app: incoming message → Haiku 5.5 classifies intent → Sonnet 5.5 at low effort drafts the reply → Opus 5.5 handles refund disputes. A plain MODEL_BY_STEP map in code picks the model, so no LLM makes the routing call. Next move: take 10 real tasks that each have an outcome check, run 2 models at 2 effort levels, and plot score against spend. Try it? Yes. If you already have tests, start with the low-then-rerun-failures pattern. Tips: run a log-reader subagent on Haiku by setting model: haiku in .claude/agents/log-reader.md; define your own Explore subagent with model: haiku, since the built-in one now runs on your session's model; CLAUDE_CODE_SUBAGENT_MODEL sets the default model for subagents that don't name one; on Sonnet, Opus, and Fable 5.x, setting tool_choice to any or tool returns a 400 error, so send auto and mark the tool strict: true; when moving from Haiku 4.5 to 5.5, replace budget_tokens with an effort level and drop custom temperature, top_p, and top_k; Fable 5.2 returns a 400 error if you edit any earlier history, so keep it append-only; for a quick check, run one backlog task on two models with /model and compare what /usage reports.
+
+## Sources
+
+- [Which Claude model should you build with?](https://claude.dev/blog/which-claude-model-should-you-build-with/)
