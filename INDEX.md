@@ -4,13 +4,13 @@
 
 | Index file | Item folder | Topic | ID prefix | Items |
 |---|---|---|---|---|
-| [knowledge/pipelines.md](knowledge/pipelines.md) | `knowledge/pipelines/` | AI Pipelines | `PIPE-NNN` | 28 |
-| [knowledge/evals.md](knowledge/evals.md) | `knowledge/evals/` | AI Evals | `EVAL-NNN` | 37 |
-| [knowledge/methods.md](knowledge/methods.md) | `knowledge/methods/` | AI Methods & Techniques | `METH-NNN` | 135 |
-| [knowledge/devex.md](knowledge/devex.md) | `knowledge/devex/` | DevEx for AI | `DEVX-NNN` | 78 |
-| [knowledge/tools-and-repos.md](knowledge/tools-and-repos.md) | `knowledge/tools-and-repos/` | Tools & Repos | `TOOL-NNN` | 45 |
+| [knowledge/pipelines.md](knowledge/pipelines.md) | `knowledge/pipelines/` | AI Pipelines | `PIPE-NNN` | 34 |
+| [knowledge/evals.md](knowledge/evals.md) | `knowledge/evals/` | AI Evals | `EVAL-NNN` | 43 |
+| [knowledge/methods.md](knowledge/methods.md) | `knowledge/methods/` | AI Methods & Techniques | `METH-NNN` | 187 |
+| [knowledge/devex.md](knowledge/devex.md) | `knowledge/devex/` | DevEx for AI | `DEVX-NNN` | 97 |
+| [knowledge/tools-and-repos.md](knowledge/tools-and-repos.md) | `knowledge/tools-and-repos/` | Tools & Repos | `TOOL-NNN` | 51 |
 
-Total: 323 items.
+Total: 412 items.
 
 Ids are a per-topic prefix plus a 3-digit number. They are stable: never renumbered or reused. New items take the next free number.
 
