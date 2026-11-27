@@ -2,7 +2,7 @@
 
 ## Summary
 
-Experimental opt-in (2.1.323+): Claude writes one JavaScript block that runs several tool calls (parallel, chained, filtered) and reads back only the result, aimed at repetitive multi-file edits and searches that need filtering. Not available with ZDR, HIPAA config, gateways, Bedrock, Claude Platform on AWS, Google Cloud's Agent Platform, Microsoft Foundry, or with OpenTelemetry export / DISABLE_TELEMETRY on; interactive terminal only. In auto mode the classifier reviews the code, not each call; deny/ask rules and PreToolUse hooks still apply per call. Feasibility Medium, stage Assess, ~10 min.
+Experimental opt-in (2.1.323+): Claude writes one JavaScript block that runs several tool calls (parallel, chained, filtered) and reads back only the result, aimed at repetitive multi-file edits and searches that need filtering. Not available with ZDR, HIPAA config, gateways, Bedrock, Claude Platform on AWS, Google Cloud's Agent Platform, Microsoft Foundry, or with OpenTelemetry export / DISABLE_TELEMETRY on; interactive terminal only. In auto mode the classifier reviews the code, not each call; deny/ask rules and PreToolUse hooks still apply per call. Since 2.1.329 a crashing PreToolUse hook no longer blocks a script's tool call, so add "onFailure": "block" to security hooks and consider asking before each script. Feasibility Medium, stage Assess, ~10 min.
 
 ## Details
 
@@ -11,6 +11,8 @@ Experimental opt-in (2.1.323+): Claude writes one JavaScript block that runs sev
 - Mod, Code Mode audit log (~3 min, needs `jq`; a hook that fails to start blocks the call, so check `which jq`): in `~/.claude/settings.json` add a `PreToolUse` hook with matcher `REPL` running `jq -c '{ts: (now|todate), session: .session_id, code: .tool_input.code}' >> ~/.claude/code-mode-audit.jsonl` (full JSON below; the command is an adaptation of the docs).
 - Mod, org kill switch (~2 min): in `managed-settings.json` `{ "env": { "CLAUDE_CODE_EXPERIMENTAL_CODE_MODE": "0" } }`; managed 0 wins over a user's 1, running sessions keep it until restart. A project's settings can't turn it on.
 - Most-discussed change on X this week (top post ~700 likes). Seen in 5+ sources. Expires Feb 13, 2027.
+
+Update (Nov 22): 2.1.329: a `PreToolUse` hook that crashes no longer blocks a Code Mode script's tool call; add `"onFailure": "block"` to every security hook. Code Mode can now also start with telemetry off; keep managed `CLAUDE_CODE_EXPERIMENTAL_CODE_MODE=0` if you need it off. Mod: `{"permissions":{"ask":["REPL"]}}` to approve each script. See DEVX-098.
 
 ## Content
 
@@ -47,6 +49,18 @@ CLAUDE_CODE_EXPERIMENTAL_CODE_MODE=1 claude
 
 Credit: both mods come from Anthropic's Code Mode docs and release notes. The audit-log command is an adaptation of the docs' `REPL` hook guidance.
 
+### Nov 22 update: Claude Code 2.1.329
+
+- **Hook failures:** a `PreToolUse` hook that crashes no longer blocks a Code Mode script's tool call. Add `"onFailure": "block"` to every security hook. Credit: [2.1.329 release](https://github.com/anthropics/claude-code/releases/tag/v2.1.329).
+- **Telemetry:** Code Mode can now also start with telemetry off, so keep the managed `CLAUDE_CODE_EXPERIMENTAL_CODE_MODE=0` (the kill switch above) if you need it off.
+- **Mod, approve each Code Mode script before it runs** (~2 min): this closes the gap left by the 2.1.329 hook change. Press `Ctrl+O` to read the code. Add to `~/.claude/settings.json`:
+
+```json
+{"permissions":{"ask":["REPL"]}}
+```
+
+See DEVX-098 for the full 2.1.329/2.1.330 alert.
+
 ## Sources
 
 - [Code Mode docs](https://code.claude.com/docs/en/code-mode)
@@ -55,3 +69,4 @@ Credit: both mods come from Anthropic's Code Mode docs and release notes. The au
 - [@voidfreud on X](https://x.com/voidfreud/status/2121293579104751894)
 - [@aloft_ai on X](https://x.com/aloft_ai/status/2121573745261191666)
 - [@me_deepu on X](https://x.com/me_deepu/status/2121843228752417148)
+- [2.1.329 release notes](https://github.com/anthropics/claude-code/releases/tag/v2.1.329)
